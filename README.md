@@ -14,6 +14,7 @@ Next update the nerdpack id for that account:
 ```
 nr1 nerdpack:uuid -g
 ```
+*Note:  Don't commit the nr1.json file to the repo, this contains your UUID.*
 
 Install the node packages:
 ```
