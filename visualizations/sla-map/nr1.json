@@ -1,0 +1,89 @@
+{
+    "schemaType": "VISUALIZATION",
+    "id": "sla-map",
+    "displayName": "SlaMap",
+    "description": "",
+    "configuration": [
+        {
+            "name": "title",
+            "title": "Chart title",
+            "description": "A title for the map",
+            "type": "string"
+        },
+        {
+            "name": "accountId",
+            "title": "Account ID",
+            "description": "Account ID to be associated with the queries",
+            "type": "account-id"
+        },
+        {
+            "name": "nrqlQueries",
+            "title": "NRQL Queries",
+            "type": "collection",
+            "items": [
+                {
+                    "name": "query",
+                    "title": "Query",
+                    "description": "NRQL query for visualization",
+                    "type": "nrql"
+                }
+            ]
+        },
+        {
+            "name": "combineMethod",
+            "title": "Method to combine across query results",
+            "description": "Average the values, or Multiply each value/100 then multiply product by 100",
+            "type": "enum",
+            "items": [
+                {
+                    "title": "Average",
+                    "value": "average"
+                },
+                {
+                    "title": "Multiply",
+                    "value": "multiply"
+                }
+            ]
+        },
+        {
+            "name": "decimalPlaces",
+            "title": "Decimal places",
+            "description": "Number of decimal places to round combined results",
+            "type": "enum",
+            "items": [
+                {
+                    "title": "none",
+                    "value": 0
+                },
+                {
+                    "title": "1",
+                    "value": 1
+                },
+                {
+                    "title": "2",
+                    "value": 2
+                },
+                {
+                    "title": "3",
+                    "value": 3
+                },
+                {
+                    "title": "4",
+                    "value": 4
+                }
+            ]
+        },
+        {
+            "name": "warning",
+            "title": "Threshold for warning",
+            "description": "A threshold for the warning color",
+            "type": "number"
+        },
+        {
+            "name": "critical",
+            "title": "Threshold for critical",
+            "description": "A threshold for the critical color",
+            "type": "number"
+        }
+    ]
+}
