@@ -143,7 +143,8 @@ export default class SlaMapVisualization extends React.Component {
     };
 
     setColor = (context) => {
-        const {warning, critical} = this.props;
+        const warning = Number(this.props.warning);
+        const critical = Number(this.props.critical);
         // brighter green for higher number
         let opacity = 0.1 + 0.9 * (context.countryValue - critical) / (100 - critical);
         let fill = context.color;
